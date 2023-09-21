@@ -1,3 +1,4 @@
+// dont forget to import Link component
 import Link from 'next/link'
 
 export default function Home() {

@@ -1,4 +1,5 @@
 import './globals.css'
+// import from google fonts
 import { Rubik } from 'next/font/google'
 
 // components
@@ -14,6 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/* apply custom fonts to the template */}
+      
       <body className={rubik.className}>
         <Navbar />
         {children}
