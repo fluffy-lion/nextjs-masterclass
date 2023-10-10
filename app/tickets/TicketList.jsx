@@ -17,6 +17,7 @@ export default async function TicketList() {
     <>
       {tickets.map((ticket) => (
         <div key={ticket.id} className="card my-5">
+          {/* dynamic, when clicked will update param for us to view the individual ticket */}
           <Link href={`/tickets/${ticket.id}`}>
             <h3>{ticket.title}</h3>
             <p>{ticket.body.slice(0, 200)}...</p>

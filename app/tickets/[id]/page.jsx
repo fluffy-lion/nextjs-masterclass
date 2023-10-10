@@ -1,3 +1,7 @@
+// this will be rendered when the route goes to
+// http://localhost:4000/tickets/${id}
+// the id is the parameter (params) that we send to it
+// its a changeble part of the route
 async function getTicket(id) {
   const res = await fetch(`http://localhost:4000/tickets/${id}`, {
     next: {
@@ -8,7 +12,7 @@ async function getTicket(id) {
   return res.json()
 }
 
-
+// getting params which contains the id
 export default async function TicketDetails({ params }) {
   // const id = params.id
   const ticket = await getTicket(params.id)
